@@ -1,0 +1,182 @@
+# 可以说这一部分的内容都是controller的
+## BLOG-BLOG
+
+TagControllerTest
+	getBloggerTags
+	getTagInfo
+	addTag
+	updateTag
+	deleteTag
+
+LoginRegisterControllerTest
+	register
+	logout
+
+BlogControllerTest
+	getBloggerInfo
+	getBlogAllPost
+
+BloggerControllerTest
+	getBloggerInfo
+	getSelfBloggerInfo
+
+SubscribeControllerTest
+	subscribe
+	unsubscribe
+	subscribed
+
+PublicControllerTest
+	viewRecommendPosts
+	searchBlog
+	likeBlog
+	searchTagInfo
+	getPublicHotTagInfo
+
+AttachmentControllerTest
+	getAttachmentInfo
+	getBloggerAttachments
+	uploadAttachment
+	deleteAttachmentInfo
+
+
+## BLOG-POST
+
+CommentControllerTest
+	getCommentInfo
+	addCommentInfo
+	deleteCommentInfo
+	getAllReplyComment
+	reviewComment
+
+PostControllerTest
+	reviewComment
+	addPost
+	getBloggerPosts
+	getPostInfo
+	getPostDetail
+	updatePostInfo
+	updatePostDetail
+	deletePost
+
+
+## BLOG-CORE : Service
+
+CommentServiceImplTest
+	getAllReplyComment
+	getCommentInfo
+
+PermissionServiceImplTest
+	loginBlogger
+	logoutBlogger
+	getSelfBloggerIdTest
+	assertIsSelfBlogger
+	assertIsSelfTag
+	assertIsSelfAttachment
+	assertIsSelfPost
+	assertIsPostAvailable
+
+PostServiceImplTest
+	listRecommended
+	searchPosts
+	addPost
+
+BlogServiceImplTest
+	getBlogInfo
+	getBlogAllPost
+
+SubscribeServiceImplTest
+	subscribe
+	unsubscribe
+
+AttachmentServiceImplTest
+	getBloggerAttachments
+	getAttachmentInfo
+	saveAttachment
+	deleteAttachment
+	getAttachmentMd5sum
+
+BloggerServiceImplTest
+	getBloggerInfo
+	updateBloggerInfo
+	addBloggerInfo
+	updateBloggerAvatar
+
+TagServiceImplTest
+	getTagInfo
+	addTag
+	updateTag
+	deleteTag
+
+
+## BLOG-CORE : Mapper 
+
+BloggerMapperTest
+	getBloggerById
+	getBloggerByContactAndPassword
+	updateBloggerInfo
+	addBloggerInfo
+
+PermissionMapperTest
+	checkTagOwner
+	checkAttachmentOwner
+	checkPostAuthor
+	checkPostPublic
+
+CommentMapperTest
+	getComment
+	addComment
+	getReplyComment
+	reviewComment
+	getCommentById
+	getCommentOnlyUnreviewed
+	deleteAttachmentInfo
+
+PostMapperTest
+	listRecommendPostInfo
+	getBloggerLikedPosts
+	searchPostsByTagAndTitleHint
+	searchPostsByTagAndDetailHint
+	addBloggerLikePost
+	getBloggerAllPostInfo
+	getBloggerPublicPostInfo
+	getPostInfo
+	getPostDetail
+	addPost
+	updatePostInfo
+	updatePostTags
+	updatePostDetail
+	deletePost
+	updateAddPostLike
+	updateAddPostView
+	findTagIdByNameAndAuthor
+
+SubscribeMapperTest
+	subscribe
+	unsubscribe
+	subscribed
+	bothBloggerExists
+	getOnesFansCount
+	getOnesFans
+
+AttachmentMapperTest
+	getAttachmentMd5
+	addAttachmentInfo
+	getBloggerAttachment
+	getAttachmentInfo
+	deleteAttachmentInfo
+
+TagMapperTest
+	getTagInfoByName
+	getPublicTags
+	getBloggerTags
+	getHotTags
+	getTagInfo
+	addTag
+	updateTag
+	deleteTag
+
+BlogMapperTest
+	getBlogByIdAll
+	getBlogByIdPublic
+	updateBlogVisitCount
+
